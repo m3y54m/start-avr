@@ -1,2 +1,7 @@
-# start-avr-linux
-Getting started with AVR programming in Linux
+# Getting started with AVR programming in Linux
+
+## Create Build Environment
+
+```console
+sudo apt install gcc-avr
+```
