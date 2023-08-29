@@ -35,16 +35,16 @@ sudo apt-get install avrdude
 
 int main()
 {
-	DDRB |= (1 << PB0);
+    DDRB |= (1 << PB0);
 
-	while (1)
-	{
-		PORTB |= (1 << PB0);
-		_delay_ms(1000);
-		PORTB &= ~(1 << PB0);
-		_delay_ms(1000);
-	}
-	return 0;
+    while (1)
+    {
+        PORTB |= (1 << PB0);
+        _delay_ms(1000);
+        PORTB &= ~(1 << PB0);
+        _delay_ms(1000);
+    }
+    return 0;
 }
 ```
 
@@ -69,6 +69,12 @@ avr-gcc -mmcu=atmega328p -Wall -Os -o build/blink.elf src/blink.c
 avr-objcopy -j .text -j .data -O ihex build/blink.elf build/blink.hex
 ```
 
+or just use the `Makefile` and execute this command:
+
+```console
+make
+```
+
 ## Upload the Program to Atmega328P
 
 To ensure that the USBasp programmer is detected and connected to Atmega328, verify the device signature:
@@ -81,6 +87,12 @@ Upload the program:
 
 ```console
 avrdude -c usbasp-clone -p m328p -U flash:w:build/blink.hex
+```
+
+or just use the `Makefile` and execute this command:
+
+```console
+make upload
 ```
 
 ## Resources

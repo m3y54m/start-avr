@@ -1,10 +1,22 @@
-all: blink.o
-	avrdude -c usbasp-clone -p m328p -U flash:w:build/blink.hex
+PROGRAM_NAME = blink
+SRC_DIR = src
+BUILD_DIR = build
 
-blink.o: src/blink.c 
-	mkdir -pv build
-	avr-gcc -mmcu=atmega328p -Wall -Os -o build/blink.elf src/blink.c
-	avr-objcopy -j .text -j .data -O ihex build/blink.elf build/blink.hex
+all: $(PROGRAM_NAME)
 
+# Create the build directory
+$(BUILD_DIR):
+	mkdir -pv $(BUILD_DIR)
+
+# Compile and build the program for Atmega328P
+$(PROGRAM_NAME): $(BUILD_DIR)
+	avr-gcc -mmcu=atmega328p -Wall -Os -o $(BUILD_DIR)/$(PROGRAM_NAME).elf $(SRC_DIR)/$(PROGRAM_NAME).c
+	avr-objcopy -j .text -j .data -O ihex $(BUILD_DIR)/$(PROGRAM_NAME).elf $(BUILD_DIR)/$(PROGRAM_NAME).hex
+
+# Upload the built program (hex file) to Atmega328P using USBasp
+upload: $(PROGRAM_NAME)
+	avrdude -c usbasp-clone -p m328p -U flash:w:$(BUILD_DIR)/$(PROGRAM_NAME).hex
+
+# Remove build directory with all built files
 clean:
-	rm -rf build 
+	rm -rf $(BUILD_DIR) 
