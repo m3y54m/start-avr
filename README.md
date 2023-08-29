@@ -1,6 +1,7 @@
 # Getting started with AVR programming
 
 Target microcontroller: Atmega328P
+
 Host OS: Ubuntu 20.04 (Running on Windows WSL2)
 
 ## Install AVR-GCC Compiler
