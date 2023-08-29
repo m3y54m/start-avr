@@ -22,7 +22,7 @@ sudo apt-get install avrdude
 
 ## Atmega328P Pinout
 
-![68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067](https://github.com/m3y54m/start-avr-linux/assets/1549028/5b1a40e6-b7c9-4ace-acd8-75e5bdb56ed6)
+![Atmega328P Pinout](https://github.com/m3y54m/start-avr/assets/1549028/7c222c32-0c19-44ef-be49-052d2cd0fc68)
 
 ## The `blink.c` Program
 
@@ -52,18 +52,17 @@ int main()
 
 - [USBasp - USB programmer for Atmel AVR controllers](https://www.fischl.de/usbasp/)
 
-![image](https://github.com/m3y54m/start-avr-linux/assets/1549028/274377b5-8b9a-4aef-9fb1-94cd0eedecb7)
+![USBasp](https://github.com/m3y54m/start-avr/assets/1549028/0ef402de-c759-4e85-b45b-a7d1f495e17c)
 
-### ISP Programmer Pinout
+### ISP Pinout
 
-![image](https://github.com/m3y54m/start-avr-linux/assets/1549028/f80fc5cf-42a9-4e41-b1bc-518537fea0dd)
+![ISP Pinout](https://github.com/m3y54m/start-avr/assets/1549028/017c2d6d-ee3a-41b0-8b64-752e97a389b2)
 
 ### Connection
 
-![USBASP-10-pin-wiring-to-AVR-Atmega328-chip](https://github.com/m3y54m/start-avr-linux/assets/1549028/62c4d115-8f2d-4aba-bbb1-6028d10de6b0)
+![Wiring](https://github.com/m3y54m/start-avr/assets/1549028/0efd9b1c-5292-42c6-a5ec-60286b23cdf9)
 
 ## Build the Program
-
 
 ```console
 avr-gcc -mmcu=atmega328p -Wall -Os -o build/blink.elf src/blink.c
