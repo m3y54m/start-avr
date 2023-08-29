@@ -1,4 +1,4 @@
-# Getting started with AVR programming in Linux
+# Getting started with AVR programming
 
 Target microcontroller: Atmega328P
 Host OS: Ubuntu 20.04 (Running on Windows WSL2)
