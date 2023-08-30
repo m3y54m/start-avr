@@ -12,7 +12,7 @@ Keep in mind that we are not using Arduino IDE or Arduino Core here. We are goin
 
 **If you want to use other AVR microcontrollers, you should change the [`Makefile`](Makefile)**.
 
-[AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc) is the most popular toolchain for AVR programming. I recommend you to use Linux to install AVR-GCC and compile and build AVR programs. It is easier and you will have less problems. However, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
+[AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc) is the most popular toolchain for AVR programming. I recommend you to use Linux to install AVR-GCC to compile and build AVR programs. It is easier and you will have less problems. However, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
 
 - Target microcontroller: **Atmega328P**
 - Host OS: **Ubuntu 20.04 (Running on Windows WSL2)**
