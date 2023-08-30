@@ -1,6 +1,6 @@
 # Getting started with AVR programming
 
-If you want to start AVR bare-metal programming and you don't know how, this repository is created for you.
+If you want to start AVR programming and you don't know how, this repository is created for you.
 
 There are two great resources to learn AVR programming which I highly recommend them to beginners:
 
@@ -8,9 +8,11 @@ There are two great resources to learn AVR programming which I highly recommend 
 - [📕 Make: AVR Programming - Elliot Williams](https://www.oreilly.com/library/view/make-avr-programming/9781449356484/)
 
 For this project I use Atmega328P which is a very famous and lovely microcontroller used in Arduino Uno.
-But we are not using Arduino IDE or libraries here. If you want to us other AVR microcontrollers, you should change the [`Makefile`](Makefile).
+Keep in mind that we are not using Arduino IDE or Arduino Core here. We are going to learn and practice AVR bare-metal programming.
 
-Since the free compiler for AVR microcontrollers ([AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc)) is only available for Linux, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows and OSX presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
+**If you want to use other AVR microcontrollers, you should change the [`Makefile`](Makefile)**.
+
+[AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc) is the most popular toolchain for AVR programming. I recommend you to use Linux to install AVR-GCC and compile and build AVR programs. It is easier and you will have less problems. However, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
 
 - Target microcontroller: **Atmega328P**
 - Host OS: **Ubuntu 20.04 (Running on Windows WSL2)**
@@ -85,9 +87,13 @@ int main()
 
 ![ISP Pinout](https://github.com/m3y54m/start-avr/assets/1549028/017c2d6d-ee3a-41b0-8b64-752e97a389b2)
 
-### Connection
+### Programmer Connection
 
-![Wiring](https://github.com/m3y54m/start-avr/assets/1549028/0efd9b1c-5292-42c6-a5ec-60286b23cdf9)
+![Programmer Connection](https://github.com/m3y54m/start-avr/assets/1549028/0efd9b1c-5292-42c6-a5ec-60286b23cdf9)
+
+### LED Blinky Circuit
+
+![LED Blinky Circuit](https://github.com/m3y54m/start-avr/assets/1549028/c2ffe75c-f015-48a5-b35e-3d77a0dabc1d)
 
 ## Build the Program
 
@@ -126,7 +132,8 @@ make upload
 
 - [ATmega48A/PA/88A/PA/168A/PA/328/P Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf)
 - [AVR Programing Using avrdude in Ubuntu](https://medium.com/@ppatil/avr-programing-using-avrdude-in-ubuntu-93734c26ad19)
-- [A simple LED blinking project that uses the AVR toolchain without the Arduino IDE. ](https://github.com/tzhenghao/blink-ATmega328p)
+- [A simple LED blinking project that uses the AVR toolchain without the Arduino IDE.](https://github.com/tzhenghao/blink-ATmega328p)
+- [How to Build an AVR Blinking LED Circuit](http://www.learningaboutelectronics.com/Articles/AVR-blinking-LED-circuit.php)
 - [Standalone ATmega328p](https://doc.riot-os.org/group__boards__atmega328p.html)
 - [How to Program an AVR chip using a USBASP](http://www.learningaboutelectronics.com/Articles/Program-AVR-chip-using-a-USBASP-with-10-pin-cable.php)
 - [Programing AVR on Ubuntu with USBasp for beginers](https://fos.cmb.ac.lk/esl/programing-avr-ubuntu-14-04-usbasp/)
