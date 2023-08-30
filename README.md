@@ -141,6 +141,12 @@ If you do something wrong with the fuse bits you may brick your microcontroller.
 - [Fuse bits aren’t that scary](https://embedderslife.wordpress.com/2012/08/20/fuse-bits-arent-that-scary/)
 - [AVR® Fuses](https://microchipdeveloper.com/8avr:avrfuses)
 
+## My AVR Playground
+
+I have a playground repository for AVR programming where I rewrite my old AVR programs and practice my fundamental embedded programming skills. It could be beneficial for you as well:
+
+- [My AVR Programming Playground](https://github.com/m3y54m/avr-playground)
+
 ## Resources
 
 - [ATmega48A/PA/88A/PA/168A/PA/328/P Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf)
