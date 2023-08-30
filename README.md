@@ -1,24 +1,51 @@
 # Getting started with AVR programming
 
-Target microcontroller: Atmega328P
+If you want to start AVR bare-metal programming and you don't know how, this repository is created for you.
 
-Host OS: Ubuntu 20.04 (Running on Windows WSL2)
+There are two great resources to learn AVR programming which I highly recommend them to beginners:
+
+- [🎞️ Getting Started With AVR](https://www.youtube.com/playlist?list=PLtQdQmNK_0DRhBWYZ32BEILOykXLpJ8tP)
+- [📕 Make: AVR Programming - Elliot Williams](https://www.oreilly.com/library/view/make-avr-programming/9781449356484/)
+
+For this project I use Atmega328P which is a very famous and lovely microcontroller used in Arduino Uno.
+But we are not using Arduino IDE or libraries here. If you want to us other AVR microcontrollers, you should change the [`Makefile`](Makefile).
+
+Since the free compiler for AVR microcontrollers ([AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc)) is only available for Linux, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows and OSX presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
+
+- Target microcontroller: **Atmega328P**
+- Host OS: **Ubuntu 20.04 (Running on Windows WSL2)**
 
 ## Install AVR-GCC Compiler
+
+Ubuntu users:
 
 ```console
 sudo apt-get install gcc build-essential
 sudo apt-get install gcc-avr binutils-avr avr-libc gdb-avr
 ```
 
+Windows users:
+
+Download and extract [AVR 8-Bit Toolchain (Windows)](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers). Add the address of `bin` folder to your system `Path`.
+
+- [Using the GNU AVR toolchain on Windows 10](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html#avr-gcc)
+- [AVR GCC Toolchain – Setup for Windows](https://tinusaur.com/guides/avr-gcc-toolchain/)
+- [Make for Windows](https://gnuwin32.sourceforge.net/packages/make.htm)
+
 ## Install AVRDUDE
 
 Install In-system programming software avrdude. AVRDUDE is an open source utility to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP).
+
+Ubuntu users:
 
 ```console
 sudo apt-get install libusb-dev
 sudo apt-get install avrdude
 ```
+
+Windows users:
+
+- [AVRDUDE is a utility to program AVR microcontrollers ](https://github.com/avrdudes/avrdude/releases)
 
 ## Atmega328P Pinout
 
@@ -103,7 +130,8 @@ make upload
 - [Standalone ATmega328p](https://doc.riot-os.org/group__boards__atmega328p.html)
 - [How to Program an AVR chip using a USBASP](http://www.learningaboutelectronics.com/Articles/Program-AVR-chip-using-a-USBASP-with-10-pin-cable.php)
 - [Programing AVR on Ubuntu with USBasp for beginers](https://fos.cmb.ac.lk/esl/programing-avr-ubuntu-14-04-usbasp/)
-- [AVRDUDE - AVR Downloader/UploaDEr](https://www.nongnu.org/avrdude/)
+- [AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc)
+- [AVRDUDE - AVR Downloader/UploaDEr](https://github.com/avrdudes/avrdude)
 - [AVRDUDESS: A GUI for AVRDUDE](https://github.com/ZakKemble/AVRDUDESS)
 - [AVR® Fuse Calculator](https://www.engbedded.com/fusecalc/)
 - [Attach a USB device to WSL](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
