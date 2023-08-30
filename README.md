@@ -47,7 +47,9 @@ sudo apt-get install avrdude
 
 Windows users:
 
-- [AVRDUDE is a utility to program AVR microcontrollers ](https://github.com/avrdudes/avrdude/releases)
+Download and extract [AVRDUDE for Windows](https://github.com/avrdudes/avrdude/releases). Add the address of the folder to your system `Path`.
+
+There is also a GUI version of AVRDUDE for Windows called [AVRDUDESS](https://github.com/ZakKemble/AVRDUDESS) which can be used to program your microcontroller manually.
 
 ## Atmega328P Pinout
 
