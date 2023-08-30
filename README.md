@@ -6,6 +6,7 @@ There are two great resources to learn AVR programming which I highly recommend 
 
 - [🎞️ Getting Started With AVR](https://www.youtube.com/playlist?list=PLtQdQmNK_0DRhBWYZ32BEILOykXLpJ8tP)
 - [📕 Make: AVR Programming - Elliot Williams](https://www.oreilly.com/library/view/make-avr-programming/9781449356484/)
+- [Code examples for the book "Make: AVR Programming"](https://github.com/hexagon5un/AVR-Programming)
 
 For this project I use Atmega328P which is a very famous and lovely microcontroller used in Arduino Uno.
 Keep in mind that we are not using Arduino IDE or Arduino Core here. We are going to learn and practice AVR bare-metal programming.
