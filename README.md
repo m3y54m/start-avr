@@ -131,6 +131,16 @@ or just use the `Makefile` and execute this command:
 make upload
 ```
 
+**⚠️ WARNING:**
+
+**Do not play with *FUSE BITS*** if you do not know what you are doing!
+
+Fuse bits can be used to change clock source of the microcontroller and enable / disable some of its functionalities.
+If you do something wrong with the fuse bits you may brick your microcontroller. So read these articles before manipulating them:
+
+- [Fuse bits aren’t that scary](https://embedderslife.wordpress.com/2012/08/20/fuse-bits-arent-that-scary/)
+- [AVR® Fuses](https://microchipdeveloper.com/8avr:avrfuses)
+
 ## Resources
 
 - [ATmega48A/PA/88A/PA/168A/PA/328/P Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf)
