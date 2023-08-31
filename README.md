@@ -82,6 +82,10 @@ int main()
 
 ## Programmer
 
+> Wait! If you have an AVR based Arduino board (Uno, Nano, etc.), you do not need a programmer! 😀
+>
+> [Go to Arduino section](#arduino)
+
 - [USBasp - USB programmer for Atmel AVR controllers](https://www.fischl.de/usbasp/)
 
 ![USBasp](https://github.com/m3y54m/start-avr/assets/1549028/0ef402de-c759-4e85-b45b-a7d1f495e17c)
@@ -141,6 +145,23 @@ If you do something wrong with the fuse bits you may brick your microcontroller.
 - [Fuse bits aren’t that scary](https://embedderslife.wordpress.com/2012/08/20/fuse-bits-arent-that-scary/)
 - [AVR® Fuses](https://microchipdeveloper.com/8avr:avrfuses)
 
+## Arduino
+
+The AVR microcontroller on an Arduino board simply can be programmed by AVRDUDE without the need of any external programmer. The Arduino bootloader makes this possible.
+
+For example if you want to program an Arduino Uno (with Atmega328P on it) use this command:
+
+```console
+avrdude -c arduino -p m328p -P COM10 -b 115200 -U flash:w:build/blink.hex
+```
+`COMx` is the Arduino boards's serial port name in Windows. In Linux it should be something like `/dev/ttyxxxx`
+
+Note that for Arduino Uno you should set `F_CPU` to `16000000UL`.
+
+For more information read this article:
+
+- [Introduction to Bare Metal Programming in Arduino Uno](https://www.hackster.io/milanistef/introduction-to-bare-metal-programming-in-arduino-uno-f3e2b4)
+
 ## My AVR Playground
 
 I have a playground repository for AVR programming where I rewrite my old AVR programs and practice my fundamental embedded programming skills. It could be beneficial for you as well:
@@ -150,7 +171,6 @@ I have a playground repository for AVR programming where I rewrite my old AVR pr
 ## Resources
 
 - [ATmega48A/PA/88A/PA/168A/PA/328/P Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf)
-- [Introduction to Bare Metal Programming in Arduino Uno](https://www.hackster.io/milanistef/introduction-to-bare-metal-programming-in-arduino-uno-f3e2b4)
 - [AVR Programing Using avrdude in Ubuntu](https://medium.com/@ppatil/avr-programing-using-avrdude-in-ubuntu-93734c26ad19)
 - [A simple LED blinking project that uses the AVR toolchain without the Arduino IDE.](https://github.com/tzhenghao/blink-ATmega328p)
 - [How to Build an AVR Blinking LED Circuit](http://www.learningaboutelectronics.com/Articles/AVR-blinking-LED-circuit.php)
