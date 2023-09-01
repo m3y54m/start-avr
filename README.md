@@ -9,7 +9,7 @@ There are two great resources to learn AVR programming which I highly recommend 
 - [Code examples for the book "Make: AVR Programming"](https://github.com/hexagon5un/AVR-Programming)
 
 For this project I use Atmega328P which is a very famous and lovely microcontroller used in Arduino Uno.
-Keep in mind that we are not using Arduino IDE or Arduino Core here. We are going to learn and practice AVR bare-metal programming.
+Keep in mind that Atmega328P is ***NOT RECOMMENDED FOR NEW DESIGNS*** and we are going to learn and practice AVR bare-metal programming using it.
 
 **If you want to use other AVR microcontrollers, you should change the [`Makefile`](Makefile)**.
 
@@ -84,7 +84,7 @@ int main()
 
 > Wait! If you have an AVR based Arduino board (Uno, Nano, etc.), you do not need a programmer! 😀
 >
-> [Go to Arduino section](#arduino)
+> [**Go to Arduino section**](#arduino)
 
 - [USBasp - USB programmer for Atmel AVR controllers](https://www.fischl.de/usbasp/)
 
