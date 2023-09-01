@@ -8,10 +8,10 @@ There are two great resources to learn AVR programming which I highly recommend 
 - [📕 Make: AVR Programming - Elliot Williams](https://www.oreilly.com/library/view/make-avr-programming/9781449356484/)
 - [Code examples for the book "Make: AVR Programming"](https://github.com/hexagon5un/AVR-Programming)
 
-For this project I use Atmega328P which is a very famous and lovely microcontroller used in Arduino Uno.
-Keep in mind that Atmega328P is ***NOT RECOMMENDED FOR NEW DESIGNS*** and we are going to learn and practice AVR bare-metal programming using it.
+For this project I use Atmega328P which is an old but lovely microcontroller used in Arduino Uno.
+Keep in mind that Atmega328P is ***NOT RECOMMENDED FOR NEW DESIGNS*** and we are going to use it only to learn and practice AVR bare-metal programming.
 
-**If you want to use other AVR microcontrollers, you should change the [`Makefile`](Makefile)**.
+**If you want to use other AVR microcontrollers, you should modify the [`Makefile`](Makefile)**.
 
 [AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc) is the most popular toolchain for AVR programming. I recommend you to use Linux to install AVR-GCC to compile and build AVR programs. It is easier and you will have less problems. However, Windows users can use WSL or VirtualBox to virtualize Linux. If you don't want to use Linux at all, you can use the [pre-built AVR-GCC toolchain for Windows presented by Microchip](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers).
 
@@ -86,19 +86,25 @@ int main()
 >
 > [**Go to Arduino section**](#arduino)
 
-- [USBasp - USB programmer for Atmel AVR controllers](https://www.fischl.de/usbasp/)
+To transfer your program to the microcontroller you need a hardware called ***"programmer"***. [USBasp](https://www.fischl.de/usbasp/) is one of the cheap programmers available for the AVR microcontrollers. I used it for this project but if you have access to other programmers that are supported by AVRDUDE, you can use them.
 
 ![USBasp](https://github.com/m3y54m/start-avr/assets/1549028/0ef402de-c759-4e85-b45b-a7d1f495e17c)
 
 ### ISP Pinout
 
+This is the standard pinout for AVR programmers.
+
 ![ISP Pinout](https://github.com/m3y54m/start-avr/assets/1549028/017c2d6d-ee3a-41b0-8b64-752e97a389b2)
 
 ### Programmer Connection
 
+Connect the programmer to your AVR microcontroller according to this diagram:
+
 ![Programmer Connection](https://github.com/m3y54m/start-avr/assets/1549028/0efd9b1c-5292-42c6-a5ec-60286b23cdf9)
 
 ### LED Blinky Circuit
+
+This is the circuit required for our ***Blinky*** program:
 
 ![LED Blinky Circuit](https://github.com/m3y54m/start-avr/assets/1549028/c2ffe75c-f015-48a5-b35e-3d77a0dabc1d)
 
