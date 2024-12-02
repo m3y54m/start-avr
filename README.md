@@ -4,7 +4,7 @@ If you want to start AVR programming and you don't know how, this repository is 
 
 There are some great resources to learn AVR programming which I highly recommend them for beginners:
 
-- [Developing with the 8-bit AVR® MCU](https://www.microchip.com/en-us/education/developer-help/learn-products/mcu-mpu/8bit-avr)
+- [Getting Started with AVR® Microcontrollers]([https://www.microchip.com/en-us/education/developer-help/learn-products/mcu-mpu/8bit-avr](https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/8-bit-avr/getting-started/))
 - [🎞️ Getting Started With AVR](https://www.youtube.com/playlist?list=PLtQdQmNK_0DRhBWYZ32BEILOykXLpJ8tP)
 - [🎞️ Fundamentals of Microcontrollers - Arduino bare-metal breakdown](https://www.youtube.com/playlist?list=PLNyfXcjhOAwOF-7S-ZoW2wuQ6Y-4hfjMR)
 - [📕 Make: AVR Programming - Elliot Williams](https://www.oreilly.com/library/view/make-avr-programming/9781449356484/)
