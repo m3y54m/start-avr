@@ -39,7 +39,7 @@ Download and extract [AVR 8-Bit Toolchain (Windows)](https://www.microchip.com/e
 
 ## Install AVRDUDE
 
-Install In-system programming software avrdude. AVRDUDE is an open source utility to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP).
+Install AVRDUDE, an in-system programming software for AVR microcontroller. AVRDUDE is a free and open source utility to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP).
 
 Ubuntu users:
 
